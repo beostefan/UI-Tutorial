@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Form, Input, Card } from "antd";
+import { useDispatch } from "react-redux";
 
 const AddTodo = () => {
+  const dispatch = useDispatch();
   return (
     <div className="AddTodo">
       <Card title="Add Todo">
         <Form
-          onFinish={() => {
-            alert("Add Todo");
+          onFinish={({ title }) => {
+            dispatch({ type: "add-todo", title: title });
           }}
         >
           <Form.Item label="Title" name="title">
