@@ -1,0 +1,14 @@
+.TodoList h1,
+.TodoList h2 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.TodoList {
+  margin: 10px;
+}
+
+.AddTodo,
+.Counter {
+  margin-bottom: 10px;
+}
