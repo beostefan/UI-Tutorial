@@ -5,14 +5,6 @@ import { useSelector } from "react-redux";
 
 const { Column } = Table;
 
-const data = [
-  {
-    id: 1,
-    completed: false,
-    title: "Buy Easter Eggs"
-  }
-];
-
 const ItemGrid = () => {
   const data = useSelector(state => state.todoList.todos);
   return (
