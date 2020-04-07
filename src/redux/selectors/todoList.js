@@ -11,3 +11,8 @@ export const getTodos = createSelector(
   getTodosInternal,
   todos => todos
 );
+
+export const isLoading = createSelector(
+  state => state.todoList.loading,
+  loading => loading
+);

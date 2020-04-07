@@ -1,24 +1,10 @@
 import { types } from "../actions/todoList";
 
 const initialState = {
-  todos: [
-    {
-      id: 1,
-      completed: false,
-      title: "Buy Easter Eggs"
-    },
-    {
-      id: 2,
-      completed: false,
-      title: "Make Toilet Paper Inventory"
-    },
-    {
-      id: 3,
-      completed: true,
-      title: "Work"
-    }
-  ]
+  loading: true,
+  todos: []
 };
+
 const todoList = (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_TODO:
@@ -31,6 +17,14 @@ const todoList = (state = initialState, action) => {
             title: action.title
           }
         ]
+      });
+    case types.SET_LOADING:
+      return Object.assign({}, state, {
+        loading: action.loading
+      });
+    case types.SET_TODOS:
+      return Object.assign({}, state, {
+        todos: action.todos
       });
     default:
       return state;
