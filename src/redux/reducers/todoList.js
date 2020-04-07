@@ -10,12 +10,12 @@ const todoList = (state = initialState, action) => {
     case types.ADD_TODO:
       return Object.assign({}, state, {
         todos: [
-          ...state.todos,
           {
             id: null,
             completed: false,
             title: action.title
-          }
+          },
+          ...state.todos
         ]
       });
     case types.SET_LOADING:

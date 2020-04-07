@@ -30,16 +30,6 @@ const ItemGrid = () => {
           render={(text, record) => <span>No</span>}
         />
         <Column title="Title" dataIndex="title" key="title" />
-        <Column
-          title="Action"
-          key="action"
-          render={(text, record) => (
-            <span>
-              <Button type="link">Edit</Button>
-              <Button type="link">Delete</Button>
-            </span>
-          )}
-        />
       </Table>
     </div>
   );

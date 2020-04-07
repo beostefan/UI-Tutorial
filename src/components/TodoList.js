@@ -3,7 +3,6 @@ import axios from "axios";
 import { message } from "antd";
 import AddTodo from "./AddTodo";
 import ItemGrid from "./ItemGrid";
-import Counter from "./Counter";
 import { useDispatch } from "react-redux";
 import { setTodos, setLoading } from "../redux/actions/todoList";
 
@@ -40,7 +39,6 @@ const TodoList = () => {
       <h2>To-Do List</h2>
       <AddTodo />
       <ItemGrid />
-      <Counter />
     </div>
   );
 };
