@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import { message } from "antd";
 import AddTodo from "./AddTodo";
 import ItemGrid from "./ItemGrid";
 import Counter from "./Counter";
@@ -10,11 +11,22 @@ const TodoList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://jsonplaceholder.typicode.com/todos");
-      dispatch(setTodos(result.data));
-      dispatch(setLoading(false));
+      dispatch(setLoading(true));
+      axios("https://jsonplaceholder.typicode.com/todos")
+        .then(result => {
+          // on SUCCESS
+          dispatch(setTodos(result.data));
+        })
+        .catch(error => {
+          // on ERROR
+          message.error("Todos could not be fetched");
+          console.error(error);
+        })
+        .then(() => {
+          // at the END
+          dispatch(setLoading(false));
+        });
     };
-    dispatch(setLoading(true));
     fetchData();
     return () => {
       // Clean up state
