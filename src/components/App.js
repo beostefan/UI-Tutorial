@@ -26,7 +26,7 @@ const App = () => {
             <TodoList />
           </Route>
           <Route path="/">
-            <div>
+            <div className="home">
               <h2>Welcome to Our Tutorial</h2>
               <p>Your application is great!</p>
             </div>
