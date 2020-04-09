@@ -6,7 +6,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {getAmountOfTodos, getTodos, isLoading} from "../redux/selectors/todoList";
 import {setLoading, setTodos} from "../redux/actions/todoList";
 import {useHistory, useParams} from "react-router";
-import "./styles/ItemGrid.scss";
 
 const {Column} = Table;
 
