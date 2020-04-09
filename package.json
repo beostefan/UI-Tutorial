@@ -1,5 +1,5 @@
 {
-  "name": "react-tutorial-todo-list-3",
+  "name": "react-tutorial-todo-list",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -16,19 +16,12 @@
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0"
   },
-  "devDependencies": {
-    "typescript": "3.3.3"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
