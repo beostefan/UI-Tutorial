@@ -5,10 +5,7 @@ const AddTodo = () => {
     return <div className="AddTodo">
         <Card title="Add Todo">
             <Form>
-                <Form.Item
-                    label="Title"
-                    name="title"
-                >
+                <Form.Item label="Title" name="title">
                     <Input/>
                 </Form.Item>
 
