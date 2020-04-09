@@ -4,7 +4,7 @@ const Counter = props => {
     return (
         <div className="Counter">
             <b>Todo Count: </b>
-            {props.amount}
+            {/* TODO */}
         </div>
     );
 };

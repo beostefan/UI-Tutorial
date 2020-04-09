@@ -25,7 +25,7 @@ const data = [
 const ItemGrid = () => {
     return (
         <div className="ItemGrid">
-            <Counter amount={data.length} />
+            <Counter/>
             <Table
                 dataSource={data}
                 rowKey="id"
