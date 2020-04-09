@@ -8,15 +8,6 @@ const AddTodo = () => {
                 <Form.Item
                     label="Title"
                     name="title"
-                    rules={[
-                        {required: true, message: "Please input a title!"},
-                        {min: 5, message: "Title must be at least 5 chars long!"},
-                        {max: 70, message: "Maximum length of title is 70!"},
-                        {
-                            pattern: /^[\w\s]+$/,
-                            message: "Title may only contain alphanumeric chars and spaces"
-                        }
-                    ]}
                 >
                     <Input/>
                 </Form.Item>
