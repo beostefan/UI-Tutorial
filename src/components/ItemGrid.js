@@ -5,8 +5,6 @@ import Counter from "./Counter";
 import {useDispatch, useSelector} from "react-redux";
 import {getAmountOfTodos, getTodos, isLoading} from "../redux/selectors/todoList";
 import {setLoading, setTodos} from "../redux/actions/todoList";
-import {useHistory, useParams} from "react-router";
-import "./styles/ItemGrid.scss";
 
 const {Column} = Table;
 
@@ -38,10 +36,7 @@ const ItemGrid = () => {
     const data = useSelector(getTodos),
         amount = useSelector(getAmountOfTodos),
         loading = useSelector(isLoading),
-        dispatch = useDispatch(),
-        history = useHistory();
-    let {page} = useParams();
-    page = page ? page : 1;
+        dispatch = useDispatch();
     useEffect(() => {
         fetchData(dispatch);
         return cleanupData(dispatch);
@@ -54,10 +49,6 @@ const ItemGrid = () => {
                 rowKey="id"
                 loading={loading}
                 className="table"
-                pagination={{
-                    current: parseInt(page, 10),
-                    onChange: page => history.push("/todos/" + page)
-                }}
             >
                 <Column
                     title="Status"
