@@ -1,12 +1,28 @@
 import React from "react";
 import {Table} from "antd";
 import Counter from "./Counter";
-import {useSelector} from "react-redux";
 
 const {Column} = Table;
 
+const data = [
+    {
+        id: 1,
+        completed: true,
+        title: "Clean up the desk"
+    },
+    {
+        id: 2,
+        completed: false,
+        title: "Write an e-mail to me"
+    },
+    {
+        id: 3,
+        completed: false,
+        title: "Read a book"
+    }
+];
+
 const ItemGrid = () => {
-    const data = useSelector(state => state.todoList.todos);
     return (
         <div className="ItemGrid">
             <Counter amount={data.length} />
