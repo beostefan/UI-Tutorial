@@ -3,7 +3,7 @@ import axios from "axios";
 import {message, Table} from "antd";
 import Counter from "./Counter";
 import {useDispatch, useSelector} from "react-redux";
-import {getAmountOfTodos, getTodos, isLoading} from "../redux/selectors/todoList";
+import {getAmountOfTodos, getTodos} from "../redux/selectors/todoList";
 import {setLoading, setTodos} from "../redux/actions/todoList";
 
 const {Column} = Table;
@@ -35,7 +35,6 @@ const cleanupData = dispatch => {
 const ItemGrid = () => {
     const data = useSelector(getTodos),
         amount = useSelector(getAmountOfTodos),
-        loading = useSelector(isLoading),
         dispatch = useDispatch();
     useEffect(() => {
         fetchData(dispatch);
@@ -47,7 +46,6 @@ const ItemGrid = () => {
             <Table
                 dataSource={data}
                 rowKey="id"
-                loading={loading}
                 className="table"
             >
                 <Column
