@@ -1,7 +1,6 @@
 import {types} from "../actions/todoList";
 
 const initialState = {
-    loading: true,
     todos: []
 };
 
@@ -17,14 +16,6 @@ const todoList = (state = initialState, action) => {
                     },
                     ...state.todos
                 ]
-            });
-        case types.SET_LOADING:
-            return Object.assign({}, state, {
-                loading: action.loading
-            });
-        case types.SET_TODOS:
-            return Object.assign({}, state, {
-                todos: action.todos
             });
         default:
             return state;
