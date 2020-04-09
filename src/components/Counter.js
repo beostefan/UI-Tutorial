@@ -3,7 +3,7 @@ import React from "react";
 const Counter = props => {
     return (
         <div className="Counter">
-            <b>To-Do Count: </b>
+            <b>Todo Count: </b>
             {props.amount}
         </div>
     );
