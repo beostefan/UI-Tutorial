@@ -4,7 +4,10 @@ import {Button, Card, Form, Input} from "antd";
 const AddTodo = () => {
     return <div className="AddTodo">
         <Card title="Add Todo">
-            <Form onFinish={() => alert("Add Todo")}>
+            <Form onFinish={(values) => {
+                alert("Add Todo");
+                console.log("Form Values", values);
+            }}>
                 <Form.Item
                     label="Title"
                     name="title"
