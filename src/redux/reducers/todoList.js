@@ -19,17 +19,7 @@ const initialState = {
 
 const todoList = (state = initialState, action) => {
     switch (action.type) {
-        case "add-todo":
-            return Object.assign({}, state, {
-                todos: [
-                    {
-                        id: null,
-                        completed: false,
-                        title: action.title
-                    },
-                    ...state.todos
-                ]
-            });
+        /* TODO */
         default:
             return state;
     }
