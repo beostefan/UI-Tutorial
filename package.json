@@ -24,12 +24,13 @@
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
   },
   "browserslist": [
     "defaults"

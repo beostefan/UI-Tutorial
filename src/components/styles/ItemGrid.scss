@@ -1,0 +1,15 @@
+@import "../../theme";
+
+.ItemGrid {
+    .table {
+        .status {
+            .done {
+                @include inactive-indicator;
+            }
+
+            .open {
+                @include active-indicator;
+            }
+        }
+    }
+}

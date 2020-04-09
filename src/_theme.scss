@@ -1,0 +1,13 @@
+// colors
+$base-font-color: #1890ff;
+
+// mixins
+@mixin active-indicator {
+    color: $base-font-color;
+    font-weight: 600;
+}
+
+@mixin inactive-indicator {
+    color: $base-font-color;
+    opacity: 0.5;
+}
