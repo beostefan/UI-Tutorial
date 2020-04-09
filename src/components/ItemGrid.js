@@ -2,16 +2,14 @@ import React from "react";
 import {Table} from "antd";
 import Counter from "./Counter";
 import {useSelector} from "react-redux";
-import {getAmountOfTodos, getTodos} from "../redux/selectors/todoList";
 
 const {Column} = Table;
 
 const ItemGrid = () => {
-    const data = useSelector(getTodos);
-    const amount = useSelector(getAmountOfTodos);
+    const data = useSelector(state => state.todoList.todos);
     return (
         <div className="ItemGrid">
-            <Counter amount={amount}/>
+            <Counter amount={data.length} />
             <Table
                 dataSource={data}
                 rowKey="id"
