@@ -55,10 +55,7 @@ const ItemGrid = () => {
                     dataIndex="completed"
                     key="status"
                     className="status"
-                    render={(isCompleted) =>
-                        isCompleted
-                            ? <span className="done">Done</span>
-                            : <span className="open">Open</span>}
+                    render={() => <span>Open</span>}
                 />
                 <Column title="Title" dataIndex="title" key="title"/>
             </Table>
