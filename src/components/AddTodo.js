@@ -1,7 +1,6 @@
 import React from "react";
 import {Button, Card, Form, Input} from "antd";
 import {useDispatch} from "react-redux";
-import {addTodo} from "../redux/actions/todoList";
 
 const AddTodo = () => {
     const dispatch = useDispatch();
@@ -10,7 +9,7 @@ const AddTodo = () => {
             <Card title="Add Todo">
                 <Form
                     onFinish={({title}) => {
-                        dispatch(addTodo(title));
+            dispatch({ type: "add-todo", title: title });
                     }}
                 >
                     <Form.Item

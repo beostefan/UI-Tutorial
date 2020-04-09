@@ -1,5 +1,3 @@
-import {types} from "../actions/todoList";
-
 const initialState = {
     todos: [
         {
@@ -21,7 +19,7 @@ const initialState = {
 
 const todoList = (state = initialState, action) => {
     switch (action.type) {
-        case types.ADD_TODO:
+        case "add-todo":
             return Object.assign({}, state, {
                 todos: [
                     {
